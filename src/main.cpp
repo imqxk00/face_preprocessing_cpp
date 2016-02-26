@@ -3,11 +3,15 @@
 
 int test1()
 {
-	Mat img =  imread("D:\\code\\cpp\\face_preprocessing_cpp\\model\\1.jpg");
-	string faceDetectModel = "D:\\code\\cpp\\face_preprocessing_cpp\\model\\haarcascade_frontalface_alt2.xml";
-	Mat result;
+	const Mat img =  imread("D:\\code\\cpp\\face_preprocessing_cpp\\model\\1.jpg");
+	const string faceDetectModel = "D:\\code\\cpp\\face_preprocessing_cpp\\model\\haarcascade_frontalface_alt2.xml";
+	const string detectionModelPath = "D:\\code\\cpp\\face_preprocessing_cpp\\model\\DetectionModel-v1.5.bin";
+	const string trackingModelPath = "D:\\code\\cpp\\face_preprocessing_cpp\\model\\TrackingModel-v1.10.bin";
+	const float ec_mc_y = 48.0;
+	const float ec_y = 40;
+	vecM result;
 
-	perImgProcessing(img, faceDetectModel, result);
+	perImgProcessing(img, faceDetectModel, detectionModelPath, trackingModelPath, ec_mc_y, ec_y, result);
 
 	return 0;
 }

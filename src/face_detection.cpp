@@ -58,7 +58,7 @@ int detectFace(FACE_HANDLE handle, const Mat img, vecR &rect, string &error)
 ********************************************/
 int  releaseDetectionHandle(FACE_HANDLE* handle)
 {
-	CascadeClassifier* face_cascade = (CascadeClassifier*)handle;
+	CascadeClassifier* face_cascade = (CascadeClassifier*)(*handle);
 	if(face_cascade)
 		delete face_cascade;
 	face_cascade = NULL;

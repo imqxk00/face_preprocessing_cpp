@@ -27,4 +27,5 @@ using namespace cv;
 
 typedef void* FACE_HANDLE;
 typedef vector<Rect> vecR;
+typedef vector<Mat> vecM;
 
