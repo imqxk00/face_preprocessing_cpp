@@ -16,8 +16,26 @@ int test1()
 	return 0;
 }
 
+int test2()
+{
+	const string rootPath = "D:\\data\\";
+	const string listPath = "D:\\data\\NIR-VIS\\list.txt";
+	const string saveRootPath = "D:\\data\\NIR-VIS_align\\";
+	const string faceDetectModel = "D:\\code\\cpp\\face_preprocessing_cpp\\model\\haarcascade_frontalface_alt2.xml";
+	const string detectionModelPath = "D:\\code\\cpp\\face_preprocessing_cpp\\model\\DetectionModel-v1.5.bin";
+	const string trackingModelPath = "D:\\code\\cpp\\face_preprocessing_cpp\\model\\TrackingModel-v1.10.bin";
+	const float ec_mc_y = 48.0;
+	const float ec_y = 40;
+	const int size = 128;
+
+	batchProcessing(rootPath, listPath, faceDetectModel, detectionModelPath, trackingModelPath, ec_mc_y, ec_y, saveRootPath, size);
+
+	return 0;
+}
+
 int main()
 {
-	test1();
+	test2();
+	system("pause");
 	return 0;
 }
